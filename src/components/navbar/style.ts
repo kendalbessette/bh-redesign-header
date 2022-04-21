@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 
-export const DesktopNav = styled.nav`
+export const NavContainer = styled.nav`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11,9 +11,7 @@ export const DesktopNav = styled.nav`
   top: 0;
 `;
 
-export const NavBarElementContainer = styled.div``;
-
-export const StyledNavBarLinkExternal = styled.a`
+export const StyledNavBarLinkExternal = styled(Link)`
   margin-top: 25px;
   z-index: 3;
   padding-left: 5px;
@@ -43,7 +41,7 @@ export const StyledNavBarLink = styled.a`
   vertical-align: middle;
   text-decoration: none;
 
-  &:active {
+  &.active span{
     background: black;
   }
 
