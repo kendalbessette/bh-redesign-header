@@ -19,6 +19,13 @@ const routes = [
     path: '/services',
     title: 'Services',
     external: false,
+    subMenu: {
+      title: 'Development', 
+      categories: {
+        title: 'React',
+        path: '/services/development'
+      }
+    }
   },
   {
     path: '/industries',
