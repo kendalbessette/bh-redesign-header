@@ -11,17 +11,9 @@ export const DesktopNav = styled.nav`
   top: 0;
 `;
 
-export const NavBarElementContainer = styled.div`
-  color: #878a8e;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 35px;
-  background: #f0f1f1;
-  border-radius: 30px;
-  vertical-align: middle;
-`;
+export const NavBarElementContainer = styled.div``;
 
-export const StyledNavBarLinkExternal = styled(Link)`
+export const StyledNavBarLinkExternal = styled.a`
   margin-top: 25px;
   z-index: 3;
   padding-left: 5px;
@@ -41,22 +33,22 @@ export const StyledNavBarLinkExternal = styled(Link)`
   }
 `;
 
-export const StyledNavBarLink = styled(Link)`
+export const StyledNavBarLink = styled.a`
+  color: #878a8e;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 35px;
+  background: #f0f1f1;
+  border-radius: 30px;
+  vertical-align: middle;
+  text-decoration: none;
 
-
-  &.active span {
+  &:active {
+    background: black;
   }
 
-  &:hover span {
-  }
-
-  & span {
-    color: #878a8e;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 35px;
-    background: #f0f1f1;
-    border-radius: 30px;
-    vertical-align: middle;
+  &:hover {
+    background: #D5E6FF;
+    color: #0060F0;
   }
 `;
