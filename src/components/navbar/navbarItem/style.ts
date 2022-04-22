@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledNavBarLink = styled.button`
+export const StyledNavBarButton = styled.button`
   font-family: sans-serif;
   color: #878a8e;
   padding: 10px;
