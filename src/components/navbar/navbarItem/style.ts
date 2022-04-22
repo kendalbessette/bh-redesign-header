@@ -12,11 +12,11 @@ export const StyledNavBarLink = styled.button`
   border: none;
 
   & .active {
-    color: #FFFFFF; 
-   }
+    color: #ffffff;
+  }
 
   &:hover {
     background: #000000;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 `;

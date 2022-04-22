@@ -1,9 +1,7 @@
 import React from 'react';
-import { SubMenuItem } from '../submenuitem';
+import {SubMenuItem} from '../submenuitem';
 
-import {
-  SubMenuContainer,
-} from './style';
+import {SubMenuContainer} from './style';
 
 // placeholder route values
 const subRoutes = [
@@ -66,11 +64,11 @@ const subRoutes = [
 export function SubMenu() {
   return (
     <SubMenuContainer>
-      {subRoutes.map((subRoute) => (
+      {subRoutes.map(subRoute => (
         <div>
           <SubMenuItem
             subMenuTitle={subRoute.subcategories.title}
-            nextLinkProps={{ href: subRoute.subcategories.path }}
+            nextLinkProps={{href: subRoute.subcategories.path}}
             key={`nav_route_${subRoute.subcategories.path}`}
           />
         </div>

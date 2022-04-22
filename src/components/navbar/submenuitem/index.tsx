@@ -1,6 +1,6 @@
-import Link, { LinkProps } from 'next/link';
+import Link, {LinkProps} from 'next/link';
 import React from 'react';
-import { StyledSubMenuLink, SubMenuElementContainer } from './style';
+import {StyledSubMenuLink, SubMenuElementContainer} from './style';
 
 interface SubMenuItemProps {
   subMenuTitle?: string;
@@ -9,11 +9,7 @@ interface SubMenuItemProps {
   linkStyle?: HTMLAnchorElement;
 }
 
-export const SubMenuItem: React.FC<SubMenuItemProps> = ({
-  subMenuTitle,
-  nextLinkProps,
-  containerStyle,
-}) => (
+export const SubMenuItem: React.FC<SubMenuItemProps> = ({subMenuTitle, nextLinkProps, containerStyle}) => (
   <SubMenuElementContainer style={containerStyle}>
     <Link {...nextLinkProps}>
       <StyledSubMenuLink>{subMenuTitle}</StyledSubMenuLink>

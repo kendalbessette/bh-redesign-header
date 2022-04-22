@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledNavBarLink } from './style';
+import {StyledNavBarLink} from './style';
 
 interface NavBarElementProps {
   title: string;
@@ -8,8 +8,8 @@ interface NavBarElementProps {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export const NavBarElement: React.FC<NavBarElementProps> = ({
-  title, active, buttonStyle, onClick,
-}) => (
-  <StyledNavBarLink className={active ? 'active' : ''} style={buttonStyle} onClick={onClick}>{title}</StyledNavBarLink>
+export const NavBarElement: React.FC<NavBarElementProps> = ({title, active, buttonStyle, onClick}) => (
+  <StyledNavBarLink className={active ? 'active' : ''} style={buttonStyle} onClick={onClick}>
+    {title}
+  </StyledNavBarLink>
 );

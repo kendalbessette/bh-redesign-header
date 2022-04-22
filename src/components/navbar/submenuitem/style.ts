@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledSubMenuLink = styled.a`
-font-family: sans-serif;
-
+  font-family: sans-serif;
 
   &:hover {
-    color: #0060F0;
+    color: #0060f0;
   }
 
   & .category-title {
