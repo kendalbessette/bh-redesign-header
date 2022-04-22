@@ -1,6 +1,5 @@
 import React from 'react';
-import {StyledNavBarLink} from './style';
-
+import {StyledNavBarButton} from './style';
 interface NavBarElementProps {
   title: string;
   active?: boolean;
@@ -9,7 +8,7 @@ interface NavBarElementProps {
 }
 
 export const NavBarElement: React.FC<NavBarElementProps> = ({title, active, buttonStyle, onClick}) => (
-  <StyledNavBarLink className={active ? 'active' : ''} style={buttonStyle} onClick={onClick}>
+  <StyledNavBarButton className={active ? 'active' : ''} style={buttonStyle} onClick={onClick}>
     {title}
-  </StyledNavBarLink>
+  </StyledNavBarButton>
 );

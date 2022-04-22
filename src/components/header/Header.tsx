@@ -1,10 +1,9 @@
 import React from 'react';
-import { Navbar } from '../navbar'
+import {Navbar} from '../navbar';
 
 interface HeaderProps {
   prop?: any;
 }
-
 
 export const Header: React.FC<HeaderProps> = (): JSX.Element => {
   return <Navbar />;

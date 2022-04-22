@@ -3,12 +3,7 @@ import {NextPageContext} from 'next';
 import {AppProps} from 'next/app';
 import {ThemeProvider} from '../src/theme';
 import {theme} from '../src/theme/theme';
-import {
-  AppWrapper,
-  Header,
-  AppContainer,
-  Head as DefaultHead,
-} from '../src/components';
+import {AppWrapper, Header, AppContainer, Head as DefaultHead} from '../src/components';
 import {GlobalStyle} from '../src/theme/global';
 
 interface Props extends AppProps {
@@ -20,8 +15,7 @@ const GlobalLayout = ({children}: {children: React.ReactNode}) => (
     <DefaultHead title="" />
     <GlobalStyle />
     <Header />
-    <AppContainer>
-    </AppContainer>
+    <AppContainer></AppContainer>
   </AppWrapper>
 );
 

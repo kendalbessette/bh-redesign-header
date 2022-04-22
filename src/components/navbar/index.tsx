@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { NavBarElement } from './navbarItem';
-import { NavContainer } from './style';
-import { BigHumanLogoCircle } from '../../assets/bighumanlogo';
-import { SubMenu } from './submenu';
+import React, {useState} from 'react';
+import {NavBarElement} from './navbarItem';
+import {NavContainer} from './style';
+import {BigHumanLogoCircle} from '../../assets/bighumanlogo';
+import {SubMenu} from './submenu';
 
+//placeholder route data
 const routes = [
   {
     path: 'work',
@@ -76,7 +77,7 @@ export function Navbar() {
         </a>
         {routes.map(route => (
           <nav>
-            <NavBarElement title={route.title} onClick={toggleShow} />
+            <NavBarElement title={route.title} key={`nav_item_${route.path}`} onClick={toggleShow} />
           </nav>
         ))}
       </NavContainer>

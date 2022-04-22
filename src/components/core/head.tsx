@@ -67,11 +67,7 @@ export const Head: React.FC<HeadProps> = ({
     {!isIndexed && <meta name="robots" content="noindex" />}
     <title>{formatTitle(title, titleDelimiter, titlePosition)}</title>
     <meta name="og:title" content={formatTitle(title, titleDelimiter, titlePosition)} />
-    <meta
-      name="description"
-      property="og:description"
-      content={description || DEFAULT_PROPS.DEFAULT_DESCRIPTION}
-    />
+    <meta name="description" property="og:description" content={description || DEFAULT_PROPS.DEFAULT_DESCRIPTION} />
     <meta name="url" property="og:url" content={canonical || DEFAULT_PROPS.DEFAULT_URL} />
     <meta name="og:image" content={image || DEFAULT_PROPS.DEFAULT_IMAGE} />
     <meta name="keywords" content={joinKeywords(keywords)} />
