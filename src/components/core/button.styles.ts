@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const GenericButton = styled.button`
+const GenericButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
@@ -12,3 +12,5 @@ export const GenericButton = styled.button`
     opacity: 0.45;
   }
 `;
+
+export default GenericButton;

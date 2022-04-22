@@ -5,15 +5,14 @@ import {
   SubMenuContainer,
 } from './style';
 
-
-//placeholder route values
+// placeholder route values
 const subRoutes = [
   {
     path: 'work',
     title: 'Work',
     submenuTitle: 'Development',
     subcategories: {
-      title: 'App Development',
+      title: 'Android',
       path: '/services/enterprise-app-development',
     },
   },
@@ -22,7 +21,7 @@ const subRoutes = [
     title: 'Services',
     submenuTitle: 'Development',
     subcategories: {
-      title: 'App Development',
+      title: 'iOS App',
       path: '/services/enterprise-app-development',
     },
   },
@@ -31,7 +30,7 @@ const subRoutes = [
     title: 'Industries',
     submenuTitle: 'Development',
     subcategories: {
-      title: 'App Development',
+      title: 'Web App',
       path: '/services/enterprise-app-development',
     },
   },
@@ -40,7 +39,7 @@ const subRoutes = [
     title: 'About',
     submenuTitle: 'Development',
     subcategories: {
-      title: 'App Development',
+      title: 'React Native',
       path: '/services/enterprise-app-development',
     },
   },
@@ -49,7 +48,7 @@ const subRoutes = [
     title: 'Careers',
     submenuTitle: 'Development',
     subcategories: {
-      title: 'App Development',
+      title: 'Enterprise',
       path: '/services/enterprise-app-development',
     },
   },
@@ -64,21 +63,18 @@ const subRoutes = [
   },
 ];
 
-export const SubMenu = () => {
-
+export function SubMenu() {
   return (
     <SubMenuContainer>
-      {subRoutes.map(route => {
-        return (
-          <div>
+      {subRoutes.map((subRoute) => (
+        <div>
           <SubMenuItem
-            subMenuTitle={route.title}
-            nextLinkProps={{href: route.subcategories.path}}
-            key={`nav_route_${route.subcategories.path}`}
+            subMenuTitle={subRoute.subcategories.title}
+            nextLinkProps={{ href: subRoute.subcategories.path }}
+            key={`nav_route_${subRoute.subcategories.path}`}
           />
         </div>
-        );
-      })}
+      ))}
     </SubMenuContainer>
   );
-};
+}

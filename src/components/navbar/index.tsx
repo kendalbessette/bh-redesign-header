@@ -1,11 +1,9 @@
-import React, {useState} from 'react';
-import {useRouter} from 'next/router';
-import {NavBarElement} from './navbarItem';
-import {NavContainer} from './style';
-import {SubMenu} from './submenu';
-import { BigHumanLogoCirlce } from '../../assets/bighumanlogo';
+import React, { useState } from 'react';
+import { NavBarElement } from './navbarItem';
+import { NavContainer } from './style';
+import { BigHumanLogoCircle } from '../../assets/bighumanlogo';
+import { SubMenu } from './submenu';
 
-//placeholder route values
 const routes = [
   {
     path: 'work',
@@ -63,34 +61,26 @@ const routes = [
   },
 ];
 
-export const Navbar = () => {
-  const router = useRouter();
-  const currentpath =  router.pathname;
+export function Navbar() {
   const [show, setShow] = useState(false);
 
-  console.log(router.pathname); 
+  function toggleShow() {
+    setShow(!show);
+  }
 
   return (
     <div>
       <NavContainer>
-        <BigHumanLogoCirlce />
-        {routes.map(route => {
-          return (
-            <nav>
-              <NavBarElement
-                nextLinkProps={{href: route.path}}
-                key={`nav_route_${route.path}`}
-                title={route.title}
-                active={route.path === currentpath}
-                onClick={() => {
-                  setShow(!show)
-                }}
-              />
-            </nav>
-          );
-        })}
+        <a href="/">
+          <BigHumanLogoCircle />
+        </a>
+        {routes.map(route => (
+          <nav>
+            <NavBarElement title={route.title} onClick={toggleShow} />
+          </nav>
+        ))}
       </NavContainer>
-      <SubMenu />
+      {show && <SubMenu />}
     </div>
   );
-};
+}

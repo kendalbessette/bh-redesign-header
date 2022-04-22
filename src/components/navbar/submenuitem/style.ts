@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledSubMenuLink = styled.a`
 font-family: sans-serif;

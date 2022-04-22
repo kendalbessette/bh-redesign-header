@@ -9,5 +9,3 @@ export const NavContainer = styled.nav`
   position: fixed;
   top: 0;
 `;
-
-
