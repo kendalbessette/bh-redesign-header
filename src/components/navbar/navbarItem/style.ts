@@ -10,13 +10,13 @@ export const StyledNavBarLink = styled.a`
   vertical-align: middle;
   text-decoration: none;
 
-  &.active a {
-    background: black;
-  }
+  &:active {
+    background: #000000;
+    color: #FFFFFF;  }
 
   &:hover {
-    background: #D5E6FF;
-    color: #0060F0;
+    background: #000000;
+    color: #FFFFFF;
   }
 `;
 

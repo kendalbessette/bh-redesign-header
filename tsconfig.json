@@ -34,7 +34,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/components/navbar/routes.js"  ],
   "plugins": [
     {
       "name": "typescript-tslint-plugin"

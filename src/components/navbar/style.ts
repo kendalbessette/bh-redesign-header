@@ -6,7 +6,7 @@ export const NavContainer = styled.nav`
   flex-direction: row;
   align-items: center;
   margin-left: 15px;
-  margin-top: 20px;
+  margin-top: 30px;
   position: fixed;
   top: 0;
 `;
@@ -37,11 +37,10 @@ export const StyledNavBarLink = styled.a`
   margin: 2px;
   border-radius: 35px;
   background: #f0f1f1;
-  border-radius: 30px;
   vertical-align: middle;
   text-decoration: none;
 
-  &.active span{
+  &.active a {
     background: black;
   }
 
@@ -49,4 +48,11 @@ export const StyledNavBarLink = styled.a`
     background: #D5E6FF;
     color: #0060F0;
   }
+`;
+
+export const SubMenuContainer = styled.div`
+  align-items: center;
+  margin-left: 15px;
+  margin-top: 30px;
+
 `;
