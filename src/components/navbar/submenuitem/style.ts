@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StyledSubMenuLink = styled.a`
+font-family: sans-serif;
+
 
   &:hover {
     color: #0060F0;

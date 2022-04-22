@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledNavBarLink = styled.a`
+  font-family: sans-serif;
   color: #878a8e;
   padding: 10px;
   margin: 2px;
@@ -10,7 +11,7 @@ export const StyledNavBarLink = styled.a`
   vertical-align: middle;
   text-decoration: none;
 
-  &:active {
+  &.active {
     background: #000000;
     color: #FFFFFF;  }
 

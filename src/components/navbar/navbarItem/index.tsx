@@ -7,8 +7,7 @@ interface NavBarElementProps {
   nextLinkProps: LinkProps;
   containerStyle?: HTMLDivElement;
   linkStyle?: HTMLAnchorElement;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
-
+  onClick: React.MouseEventHandler<HTMLDivElement>;
 }
 
 export const NavBarElement: React.FC<NavBarElementProps> = ({title, nextLinkProps, active}) => (

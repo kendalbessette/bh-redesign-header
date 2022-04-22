@@ -9,7 +9,7 @@ interface SubMenuItemProps {
   linkStyle?: HTMLAnchorElement;
 }
 
-export const SubMenuItem: React.FC<SubMenuItemProps> = ({ subMenuTitle, nextLinkProps, }) => (
+export const SubMenuItem: React.FC<SubMenuItemProps> = ({ subMenuTitle, nextLinkProps }) => (  
   <SubMenuElementContainer>
     <Link {...nextLinkProps}>
       <StyledSubMenuLink>
