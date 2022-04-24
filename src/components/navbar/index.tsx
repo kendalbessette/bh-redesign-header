@@ -4,7 +4,7 @@ import {BigHumanLogoCircle} from '../../assets/bighumanlogo';
 import Dropdown from './dropdown';
 import Link from 'next/link';
 
-//placeholder route data
+//placeholder route data for testing
 const routes = [
   {
     path: 'work',
