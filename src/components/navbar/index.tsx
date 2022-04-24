@@ -1,87 +1,138 @@
-import React, {useState} from 'react';
-import {NavBarElement} from './navbarItem';
-import {NavContainer} from './style';
+import React from 'react';
+import {NavContainer, StyledSubMenuContainer, StyledSubMenuLink} from './style';
 import {BigHumanLogoCircle} from '../../assets/bighumanlogo';
-import {SubMenu} from './submenu';
+import Dropdown from './dropdown';
+import Link from 'next/link';
 
 //placeholder route data
 const routes = [
   {
     path: 'work',
     title: 'Work',
+    id: '1',
     submenuTitle: 'Development',
-    subcategories: {
-      title: 'App Development',
-      path: '/services/enterprise-app-development',
-    },
+    subcategories: [
+      {
+        title: 'Work Submenu',
+        path: '/services/enterprise-app-development',
+      },
+      {
+        title: 'Work Submenu 2',
+        path: '/services/enterprise-app-development',
+      },
+      {
+        title: 'Work Submenu 3',
+        path: '/services/enterprise-app-development',
+      },
+      {
+        title: 'Work Submenu 4',
+        path: '/services/enterprise-app-development',
+      },
+      {
+        title: 'Work Submenu 5',
+        path: '/services/enterprise-app-development',
+      },
+    ],
   },
   {
     path: '/services',
     title: 'Services',
+    id: '2',
     submenuTitle: 'Development',
-    subcategories: {
-      title: 'App Development',
-      path: '/services/enterprise-app-development',
-    },
+    subcategories: [
+      {
+        title: 'Services Submenu',
+        path: '/services/enterprise-app-development',
+      },
+    ],
   },
   {
     path: '/industries',
     title: 'Industries',
+    id: '3',
     submenuTitle: 'Development',
-    subcategories: {
-      title: 'App Development',
-      path: '/services/enterprise-app-development',
-    },
+    subcategories: [
+      {
+        title: 'Industries Submenu',
+        path: '/services/enterprise-app-development',
+      },
+    ],
   },
   {
     path: '/about',
     title: 'About',
     submenuTitle: 'Development',
-    subcategories: {
-      title: 'App Development',
-      path: '/services/enterprise-app-development',
-    },
+    id: '4',
+    subcategories: [
+      {
+        title: 'About Submenu',
+        path: '/services/enterprise-app-development',
+      },
+    ],
   },
   {
     path: '/careers',
     title: 'Careers',
+    id: '5',
     submenuTitle: 'Development',
-    subcategories: {
-      title: 'App Development',
-      path: '/services/enterprise-app-development',
-    },
+    subcategories: [
+      {
+        title: 'Careers Submenu ',
+        path: '/services/enterprise-app-development',
+      },
+      {
+        title: 'Careers Submenu 2',
+        path: '/services/enterprise-app-development',
+      },
+      {
+        title: 'Careers Submenu 3',
+        path: '/services/enterprise-app-development',
+      },
+      {
+        title: 'Careers Submenu 4',
+        path: '/services/enterprise-app-development',
+      },
+    ],
   },
   {
     path: '/blog',
     title: 'Blog',
+    id: '6',
     submenuTitle: 'Development',
-    subcategories: {
-      title: 'App Development',
-      path: '/services/enterprise-app-development',
-    },
+    subcategories: [
+      {
+        title: 'Blog Submenu',
+        path: '/services/enterprise-app-development',
+      },
+    ],
   },
 ];
 
-export function Navbar() {
-  const [show, setShow] = useState(false);
+interface NavBarProps {
+  containerStyle?: React.CSSProperties;
+}
 
-  function toggleShow() {
-    setShow(!show);
-  }
-
+export function Navbar({containerStyle}: NavBarProps) {
   return (
-    <div>
-      <NavContainer>
-        <a href="/">
-          <BigHumanLogoCircle />
-        </a>
-        {routes.map(route => (
-          <nav>
-            <NavBarElement title={route.title} key={`nav_item_${route.path}`} onClick={toggleShow} />
-          </nav>
-        ))}
-      </NavContainer>
-      {show && <SubMenu />}
-    </div>
+    <NavContainer>
+      <a href="/">
+        <BigHumanLogoCircle />
+      </a>
+      {routes.map(route => (
+        <Dropdown label={route.title}>
+          <div className="nav-submenu" style={containerStyle}>
+            {route.subcategories.map(subMenu => (
+              <StyledSubMenuContainer>
+                <Link href={subMenu.path}>
+                  <StyledSubMenuLink>
+                    <a>{subMenu.title}</a>
+                  </StyledSubMenuLink>
+                </Link>
+              </StyledSubMenuContainer>
+            ))}
+          </div>
+        </Dropdown>
+      ))}
+    </NavContainer>
   );
 }

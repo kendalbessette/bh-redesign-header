@@ -9,3 +9,28 @@ export const NavContainer = styled.nav`
   position: fixed;
   top: 0;
 `;
+
+export const StyledSubMenuLink = styled.a`
+  font-family: sans-serif;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: #0060f0;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+
+  &:visited {
+    text-decoration: none;
+  }
+
+  &: ;
+`;
+
+export const StyledSubMenuContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
