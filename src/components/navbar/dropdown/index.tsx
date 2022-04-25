@@ -1,20 +1,17 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {NavBar, SubMenuContainer} from './style';
 
 interface DropdownProps {
   label: string;
-  children: {
-    title: string;
-    path: string;
-  };
+  children?: React.ReactChild;
 }
 
 const Dropdown = ({label, children}: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const containerRef = useRef();
+  const containerRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
 
   const onMouseDown = useCallback(
-    e => {
+    (e: any) => {
       if (containerRef.current && !containerRef.current.contains(e.target)) {
         setIsOpen(false);
       }

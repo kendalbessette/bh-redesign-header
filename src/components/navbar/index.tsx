@@ -124,9 +124,7 @@ export function Navbar({containerStyle}: NavBarProps) {
             {route.subcategories.map(subMenu => (
               <StyledSubMenuContainer>
                 <Link href={subMenu.path}>
-                  <StyledSubMenuLink>
-                    <a>{subMenu.title}</a>
-                  </StyledSubMenuLink>
+                  <StyledSubMenuLink>{subMenu.title}</StyledSubMenuLink>
                 </Link>
               </StyledSubMenuContainer>
             ))}
